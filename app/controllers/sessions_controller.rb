@@ -15,5 +15,7 @@ class SessionsController < ApplicationController
   end
   
   def destroy
+    reset_session
+    redirect_to '/users', :notice => 'Sign-out successful.'
   end
 end
